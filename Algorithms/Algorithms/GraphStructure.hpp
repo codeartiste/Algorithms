@@ -18,7 +18,7 @@ public:
     GraphAdjacency(int vertices);
     
     
-}
+};
 
 
 #endif /* GraphStructure_hpp */
