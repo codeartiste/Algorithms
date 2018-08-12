@@ -15,6 +15,7 @@ class GraphAdjacency{
     int m_v; //vertices
     
 public:
+    //Constructor
     GraphAdjacency(int vertices);
     
     
