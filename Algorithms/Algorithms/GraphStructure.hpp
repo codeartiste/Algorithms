@@ -13,11 +13,11 @@
 
 class GraphAdjacency{
     int m_v; //vertices
-    
+    bool **m_alist; // 2 d array to hold adjacency values
 public:
     //Constructor
     GraphAdjacency(int vertices);
-    
+    int AddEdge( int v, int w);
     
 };
 
