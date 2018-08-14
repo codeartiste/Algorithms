@@ -18,6 +18,7 @@ public:
     //Constructor
     GraphAdjacency(int vertices);
     int AddEdge( int v, int w);
+    void PrintDFS();
     
 };
 
