@@ -8,8 +8,9 @@
 
 #include "GraphStructure.hpp"
 
+using namespace std;
 //constructor
-GraphAdjacency::GraphAdjacency(int vertices){
+GraphAdjacencyMatrix::GraphAdjacencyMatrix(int vertices){
     this->m_v = vertices;
     m_alist = new bool *[m_v] ;
     for(int i = 0 ; i < m_v ; i++){
@@ -24,7 +25,7 @@ GraphAdjacency::GraphAdjacency(int vertices){
     
 }
 
-int GraphAdjacency::AddEdge( int v, int w){
+int GraphAdjacencyMatrix::AddEdge( int v, int w){
     if( v > -1 && w > -1 && v < m_v && w < m_v){
         
         m_alist[v][w] = m_alist[w][v] = true;
@@ -34,6 +35,26 @@ int GraphAdjacency::AddEdge( int v, int w){
 }
 
 
-void GraphAdjacency::PrintDFS(){
+void GraphAdjacencyMatrix::PrintDFS(int v){
 
+	// If adjacency is matrix then do this
+
+	bool *visited = new bool [m_v];
+	for(int i = 0 ; i < m_v ; i++){
+		visited[i] = false;
+	}
+	DFSUtil(v, visited);
+
+}
+
+void GraphAdjacencyMatrix::DFSUtil(int v, bool visited[]){
+
+	visited[v] = true;
+	std::cout <<  v  << "  " ;
+	for( int i = 0 ; i < m_v ; i++){
+		if (m_alist[v][i] == true){
+			if (visited[i] != true)
+				DFSUtil(i, visited);
+		}
+	}
 }

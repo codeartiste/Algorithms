@@ -10,17 +10,33 @@
 #define GraphStructure_hpp
 
 #include <stdio.h>
+#include <iostream>
+#include <list>
+using namespace std;
 
-class GraphAdjacency{
+
+class GraphAdjacencyMatrix{
     int m_v; //vertices
     bool **m_alist; // 2 d array to hold adjacency values
+    void DFSUtil(int , bool []);
 public:
     //Constructor
-    GraphAdjacency(int vertices);
+    GraphAdjacencyMatrix(int vertices);
     int AddEdge( int v, int w);
-    void PrintDFS();
+    void PrintDFS(int v);
     
 };
 
+class GraphAdjacencyList{
+    int m_v; //vertices
+    list <int> m_list ; // array list
+    void DFSUtil(int , bool []);
+public:
+    //Constructor
+    GraphAdjacencyList(int vertices);
+    int AddEdge( int v, int w);
+    void PrintDFS(int v);
+    
+};
 
 #endif /* GraphStructure_hpp */
