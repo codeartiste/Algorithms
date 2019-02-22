@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "SortAlgorithms::domyQsort(int*, int, int):SortingAlgorithms.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "arr[pivot]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GraphAdjacencyList::PrintBFS(int):GraphStructure.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "i">
+            </PersistentString>
+            <PersistentString
+               value = "adjList[elem]">
+            </PersistentString>
+            <PersistentString
+               value = "--location *i">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GraphAdjacencyList::DFSSearchPath(int, int, bool*):GraphStructure.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "*i">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
