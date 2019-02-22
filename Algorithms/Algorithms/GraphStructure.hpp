@@ -12,31 +12,64 @@
 #include <stdio.h>
 #include <iostream>
 #include <list>
+#include <queue>
+#include <stack>
 using namespace std;
 
+class GraphAdjacencyMatrix {
+	int m_v; //vertices
+	bool **m_alist; // 2 d array to hold adjacency values
 
-class GraphAdjacencyMatrix{
-    int m_v; //vertices
-    bool **m_alist; // 2 d array to hold adjacency values
-    void DFSUtil(int , bool []);
+	void DFSUtil(int, bool[]);
 public:
-    //Constructor
-    GraphAdjacencyMatrix(int vertices);
-    int AddEdge( int v, int w);
-    void PrintDFS(int v);
-    
+	//Constructor
+	GraphAdjacencyMatrix(int vertices);
+	int AddEdge(int v, int w);
+	void PrintDFS(int v);
+
 };
 
-class GraphAdjacencyList{
-    int m_v; //vertices
-    list <int> m_list ; // array list
-    void DFSUtil(int , bool []);
+class Node_G{
 public:
-    //Constructor
-    GraphAdjacencyList(int vertices);
-    int AddEdge( int v, int w);
-    void PrintDFS(int v);
-    
+	int endVertex;
+	int weight;
+	Node_G(int ver, int w){
+		endVertex = ver;
+		weight  = w;
+	}
+
+};
+
+class GraphAdjacencyList {
+	int m_v; //vertices
+	list<Node_G> *adjList; // array of lists
+	queue<int> m_openque;
+	stack<int> m_pathStack;
+	bool m_found;
+	void DFSUtil(int, bool[]);
+public:
+	//Constructor
+	GraphAdjacencyList(int vertices);
+	int AddEdge(int v, int w, int weight);
+	void PrintDFS(int v);
+	void PrintBFS(int v);
+	void SearchPath(int start, int end);
+	void DFSSearchPath(int start, int end, bool visited[]);
+	void getDijstrasPath(int start, int end);
+
+
+	bool isCyclic();
+	bool findDFSCycleUtil(int v, bool visited[], bool recurrStack[]);
+	bool isUCyclic();
+	bool findUDFSCycleUtil(int v, bool visited[], int parent);
+
+};
+
+class Solution {
+public:
+    int numIslands(char** grid, int gridRowSize, int gridColSize);
+private:
+    void DFSMarking(char** grid, int gridRowSize, int gridColSize, int i, int j);
 };
 
 #endif /* GraphStructure_hpp */
