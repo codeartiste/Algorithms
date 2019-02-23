@@ -21,7 +21,7 @@ using namespace std;
         
         for (int i = 0 ; i < nums.size() - 2 ; i++){
             int l = i+1 ;
-            int r = nums.size() - 1;
+            int r = (int)(nums.size() - 1);
             while( l < r){
                 int sum = nums[i] + nums[l] + nums[r] ;
                 if(sum == 0){

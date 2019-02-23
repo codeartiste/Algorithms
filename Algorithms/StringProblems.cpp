@@ -8,7 +8,7 @@ int getMinimalNonRepeatingString(char *str, int len){
 	for( int i = 0 ; i < 100 ; i++){
 		lut[i] = 0;
 	}
-	int max = -1 ;
+	//int max = -1 ;
 	int start = 0 ;
 	int i = 0 ;
 	while(*end){

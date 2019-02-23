@@ -22,10 +22,10 @@ BinarySearch::~BinarySearch() {
 int  BinarySearch::doBinaryRotatedSearch(vector<int> arr, int target){
 
 	int low  = 0;
-	int high = arr.size() - 1;
+	int high = (int)(arr.size() - 1);
 	int pivot = 0;
 
-	int mid ;
+	int mid = 0;
 	while(low <= high){
 		mid = (low + high)/2;
 		// is mid + 1 pivot?
@@ -51,7 +51,7 @@ int  BinarySearch::doBinaryRotatedSearch(vector<int> arr, int target){
 	// now do the binary search based on the proper half
 
 	low = 0 ;
-	high = arr.size() - 1 ;
+	high = (int)(arr.size() - 1) ;
 
 	if(target >= arr[low]){
 		high = mid;
@@ -59,7 +59,7 @@ int  BinarySearch::doBinaryRotatedSearch(vector<int> arr, int target){
 	}
 	if(target >= arr[pivot]){
 		low =  pivot;
-		high = arr.size() -1 ;
+		high = (int)(arr.size() - 1) ;
 	}
 
 	while(low <= high){

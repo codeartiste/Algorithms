@@ -78,7 +78,7 @@ string StackAlgorithm::MakeValidParenthesis(string str ){
 	string cstr;
 	stack<char> pstack;
 
-	char c;
+	char c = 0;
 	for(int i = 0 ; i < str.size(); i++){
 
 		switch(str[i]){
