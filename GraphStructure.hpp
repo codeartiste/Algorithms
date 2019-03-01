@@ -40,9 +40,22 @@ public:
 
 };
 
+class edge{
+public:
+    int src;
+    int dest;
+    edge(int s , int d){
+        src = s;
+        dest = d;
+    }
+    
+};
+
+
 class GraphAdjacencyList {
 	int m_v; //vertices
 	list<Node_G> *adjList; // array of lists
+    list<edge> edgeList;
 	queue<int> m_openque;
 	stack<int> m_pathStack;
 	bool m_found;
@@ -50,12 +63,15 @@ class GraphAdjacencyList {
 public:
 	//Constructor
 	GraphAdjacencyList(int vertices);
-	int AddEdge(int v, int w, int weight);
+	int  AddEdge(int v, int w, int weight=0);
 	void PrintDFS(int v);
 	void PrintBFS(int v);
 	void SearchPath(int start, int end);
 	void DFSSearchPath(int start, int end, bool visited[]);
 	void getDijstrasPath(int start, int end);
+    int  findV(int parent[], int i);
+    void Union(int parent[], int x, int y);
+    bool isCyclicUnionFind();
 
 
 	bool isCyclic();

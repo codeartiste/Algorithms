@@ -15,8 +15,10 @@ namespace std {
 
 class GraphTraversal {
 
+private:
+    int nodes;
 public:
-	GraphTraversal();
+	GraphTraversal(int vertices);
 	virtual ~GraphTraversal();
 	GraphAdjacencyList *mpList;
 };

@@ -18,46 +18,85 @@
 #include "StackAlgorithm.h"
 #include "BinarySearch.h"
 
+void test_graph1(){
+    
+    std::cout << "Hello, Graphs!\n";
+    GraphAdjacencyList *pAdj = new GraphAdjacencyList(13);
+    pAdj->AddEdge(0, 1);
+    pAdj->AddEdge(1, 2);
+    pAdj->AddEdge(2, 3);
+    pAdj->AddEdge(2, 5);
+    pAdj->AddEdge(5, 6);
+    pAdj->AddEdge(5, 7);
+    pAdj->AddEdge(3, 4);
+    pAdj->AddEdge(3, 7);
+    //pAdj->AddEdge(7, 0);
+    pAdj->AddEdge(7, 12);
+    pAdj->AddEdge(7, 11);
+    pAdj->AddEdge(7, 8);
+    pAdj->AddEdge(8, 9);
+    pAdj->AddEdge(9, 10);
+    pAdj->AddEdge(8, 11);
+    pAdj->AddEdge(11, 12);
+    
+    //pAdj->PrintBFS(5);
+    
+    /* pAdj->AddEdge(0, 2);
+     pAdj->AddEdge(0, 1);
+     pAdj->AddEdge(1, 3);
+     pAdj->AddEdge(1, 4);
+     pAdj->AddEdge(3, 4);*/
+    
+    cout << "Union Find cyclic = " << pAdj->isCyclicUnionFind() << endl;
+    //pAdj->PrintDFS(7);
+    
+    //pAdj->SearchPath(1, 7);
+    cout <<endl ;
+    
+}
+
+void test_Dynamic1(){
+    RecurDynamicProg *nRP = new RecurDynamicProg();
+    int n = 8;
+    int *memo;
+    memo = new int[n + 1];
+    for (int i = 0; i <= n; i++) {
+    memo[i] = -1;
+    }
+
+    cout << "Num ways to climb = "
+    << nRP->getChildNumWaysToClimb(n, memo) << endl;
+    
+}
+
+void test_permu(){
+    //Permutations *p = new Permutations("ABC");
+    //p->doPermuteAndPrint();
+    //char str[] = "ABC";
+    //p->permute(str, 0, strlen(str) -1 );
+    
+}
+void test_stack1(){
+    StackAlgorithm st;
+    cout <<st.CheckValidParenthesis("((aaa{ccc})){}") << endl ;
+    //string *cor = st.MakeValidParenthesis("{{[[{{{)((()))");
+    //cout << *cor;
+
+    st.MakeValidParenthesis("{{[[{{{)((()))");
+    cout << endl ;
+    st.MakeValidParenthesis("{{)");
+    cout << endl ;
+    
+}
+
+
 int main(int argc, const char * argv[]) {
 	// insert code here...
-	/*    std::cout << "Hello, Graphs!\n";
-	 GraphAdjacencyList *pAdj = new GraphAdjacencyList(13);
-	 pAdj->AddEdge(0, 1);
-	 pAdj->AddEdge(1, 2);
-	 pAdj->AddEdge(2, 3);
-	 pAdj->AddEdge(2, 5);
-	 pAdj->AddEdge(5, 6);
-	 pAdj->AddEdge(5, 7);
-	 pAdj->AddEdge(3, 4);
-	 pAdj->AddEdge(3, 7);
-	 pAdj->AddEdge(7, 12);
-	 pAdj->AddEdge(7, 11);
-	 pAdj->AddEdge(7, 8);
-	 pAdj->AddEdge(8, 9);
-	 pAdj->AddEdge(9, 10);
-	 pAdj->AddEdge(8, 11);
-	 pAdj->AddEdge(11, 12);
+    test_stack1();
 
-	 //pAdj->PrintBFS(5);
-
-	 pAdj->PrintDFS(10);
 	 
-	 pAdj->SearchPath(1, 10);
 
-	 */
-	//Permutations *p = new Permutations("ABC");
-	//p->doPermuteAndPrint();
-	//char str[] = "ABC";
-	//p->permute(str, 0, strlen(str) -1 );
-	/*int n = 8;
-	int *memo;
-	memo = new int[n + 1];
-	for (int i = 0; i <= n; i++) {
-		memo[i] = -1;
-	}
-
-	cout << "Num ways to climb = "
-			<< RecurDynamicProg::getChildNumWaysToClimb(n, memo) << endl;*/
+	
 /*
 	RecurDynamicProg *nRP = new RecurDynamicProg();
 
@@ -170,16 +209,7 @@ int main(int argc, const char * argv[]) {
 	}
 	*/
 
-	/*
-	StackAlgorithm st;
-	//cout <<st.CheckValidParenthesis("((aaa{ccc}))") << endl ;
-    //string *cor = st.MakeValidParenthesis("{{[[{{{)((()))");
-    //cout << *cor;
-
-    st.MakeValidParenthesis("{{[[{{{)((()))");
-    cout << endl ;
-    st.MakeValidParenthesis("{{)");
-    */
+	
 
 	/*BinarySearch bsrch;
 
@@ -211,7 +241,7 @@ int main(int argc, const char * argv[]) {
 
 	/*RecurDynamicProg *nRP = new RecurDynamicProg();
 	nRP->CalcWaystoWriteSumofPerfectSquares(100);*/
-
+/*
 	GraphAdjacencyList *pAdj = new GraphAdjacencyList(13);
 	 pAdj->AddEdge(0, 1, 7);
 	 pAdj->AddEdge(0, 2, 2);
@@ -233,6 +263,7 @@ int main(int argc, const char * argv[]) {
 	 pAdj->AddEdge(12, 3, 2);
     
     pAdj->getDijstrasPath(0, 5) ;
+ */
 
 	return 0;
 }

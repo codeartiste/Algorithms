@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "GraphAdjacencyList::Union(int*, int, int):GraphStructure.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "&apos;*parent @ 10&apos;">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "SortAlgorithms::domyQsort(int*, int, int):SortingAlgorithms.cpp">
          <PersistentStrings>
             <PersistentString
@@ -21,6 +29,26 @@
             </PersistentString>
             <PersistentString
                value = "--location *i">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GraphAdjacencyList::isCyclicUnionFind():GraphStructure.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "parent[0]">
+            </PersistentString>
+            <PersistentString
+               value = "b">
+            </PersistentString>
+            <PersistentString
+               value = "(*ed).src">
+            </PersistentString>
+            <PersistentString
+               value = "a">
+            </PersistentString>
+            <PersistentString
+               value = "*(parent+2)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

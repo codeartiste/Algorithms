@@ -73,22 +73,6 @@
 		95137D2D2120B505002B6970 = {
 			isa = PBXGroup;
 			children = (
-				95137D382120B505002B6970 /* Algorithms */,
-				95137D372120B505002B6970 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		95137D372120B505002B6970 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				95137D362120B505002B6970 /* Algorithms */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		95137D382120B505002B6970 /* Algorithms */ = {
-			isa = PBXGroup;
-			children = (
 				958DC62E221FB41C00E28C95 /* GraphTraversal.cpp */,
 				958DC62D221FB41C00E28C95 /* GraphTraversal.h */,
 				9517B96321B065B50000BC8D /* BinarySearch.cpp */,
@@ -111,8 +95,16 @@
 				951311FA21472EA60098668D /* Problems.cpp */,
 				95403751214EBF31003B1617 /* TreeDataStructure.cpp */,
 				95403752214EBF31003B1617 /* TreeDataStructure.hpp */,
+				95137D372120B505002B6970 /* Products */,
 			);
-			path = Algorithms;
+			sourceTree = "<group>";
+		};
+		95137D372120B505002B6970 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95137D362120B505002B6970 /* Algorithms */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

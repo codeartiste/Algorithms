@@ -9,10 +9,10 @@
 #include "GraphStructure.hpp"
 namespace std {
 
-GraphTraversal::GraphTraversal() {
-	// TODO Auto-generated constructor stub
+GraphTraversal::GraphTraversal(int vertices) {
+	
 
-	mpList = new GraphAdjacencyList(20);
+	mpList = new GraphAdjacencyList(vertices);
 
 }
 

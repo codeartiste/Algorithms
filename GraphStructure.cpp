@@ -17,7 +17,6 @@ GraphAdjacencyMatrix::GraphAdjacencyMatrix(int vertices) {
 		m_alist[i] = new bool[m_v];
 		//now initialize the array to 0
 		for (int j = 0; j < m_v; j++) {
-
 			m_alist[i][j] = false;
 
 		}
@@ -72,6 +71,7 @@ int GraphAdjacencyList::AddEdge(int v, int w, int weight) {
 	//simply push v into w's list
 	adjList[v].push_back(Node_G(w, weight));
 	adjList[w].push_back(Node_G(v, weight));
+    edgeList.push_back(edge(v, w));
 
 	return 1;
 }
@@ -79,7 +79,6 @@ int GraphAdjacencyList::AddEdge(int v, int w, int weight) {
 void GraphAdjacencyList::PrintDFS(int v) {
 
 	// If adjacency is matrix then do this
-
 	bool *visited = new bool[m_v];
 	for (int i = 0; i < m_v; i++) {
 		visited[i] = false;
@@ -126,6 +125,7 @@ void GraphAdjacencyList::DFSSearchPath(int start, int end, bool visited[]) {
 				m_pathStack.pop();
 			}
 		}
+    
 }
 
 void GraphAdjacencyList::SearchPath(int start, int end) {
@@ -219,6 +219,59 @@ bool GraphAdjacencyList::isCyclic() {
 	return false;
 }
 
+int GraphAdjacencyList::findV(int parent[], int i){
+    if(parent[i] == -1)
+        return i;
+    else
+        return parent[i];
+    
+}
+
+void GraphAdjacencyList::Union(int parent[], int x, int y){
+    
+    int xset = findV(parent, x);
+    int yset = findV(parent, y);
+    if(xset != yset){
+        if(parent[xset]== -1)
+            parent[xset] = yset;
+        else
+            parent[yset] = xset;
+        
+    }
+    
+}
+
+bool GraphAdjacencyList::isCyclicUnionFind() {
+    
+    int *vertices = new int[m_v];
+    int *parent   = new int[m_v];
+    for(int i = 0 ; i < m_v ; i++){
+        vertices[i] = i;
+        parent[i]   = -1;
+    }
+    
+    list<edge>::iterator ed;
+    for (ed = edgeList.begin(); ed != edgeList.end(); ++ed) {
+    
+        int a ,b;
+        a = (*ed).src ;
+        b = (*ed).dest ;
+        if(findV(parent, a) == findV(parent, b)){
+            
+            cout<< "Cycle Detected" << endl;
+            return true;
+        }
+        else{
+            //Union sets X and Y  where src is in X and dest is in Y
+            Union(parent, a, b);
+        }
+    
+    
+    }
+    
+    return false;
+}
+
 bool GraphAdjacencyList::findDFSCycleUtil(int v, bool visited[], bool recurrStack[]) {
 
 	if(visited[v] == false){
@@ -233,9 +286,7 @@ bool GraphAdjacencyList::findDFSCycleUtil(int v, bool visited[], bool recurrStac
 			else if(recurrStack[(*i).endVertex])
 				return true;
 		}
-
 	}
-
 	recurrStack[v] = false;
 	return false;
 }

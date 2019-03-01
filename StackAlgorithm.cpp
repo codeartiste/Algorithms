@@ -13,12 +13,12 @@ using namespace std;
 
 
 StackAlgorithm::StackAlgorithm() {
-	// TODO Auto-generated constructor stub
+
 
 }
 
 StackAlgorithm::~StackAlgorithm() {
-	// TODO Auto-generated destructor stub
+
 }
 
 bool StackAlgorithm::CheckValidParenthesis(string str ){
