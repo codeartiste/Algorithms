@@ -5,8 +5,6 @@
  *      Author: sandip.pal
  */
 
-
-
 #ifndef ALGORITHMS_ALGORITHMS_ALGORITHMS_STACKALGORITHM_H_
 #define ALGORITHMS_ALGORITHMS_ALGORITHMS_STACKALGORITHM_H_
 
@@ -23,6 +21,11 @@ public:
 	virtual ~StackAlgorithm();
 	bool CheckValidParenthesis(string str );
 	string MakeValidParenthesis(string str );
+    void RemoveInvalidParenthesis(string str);
+    
+private:
+    bool isParenthesis(char c);
+    bool isValidString(string str);
 
 };
 

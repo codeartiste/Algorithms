@@ -21,7 +21,7 @@ public:
 	RecurDynamicProg();
     int getChildNumWaysToClimb(int steps, int []);
     int getNumWaystoSplit(int amount);
-    int CalcWaystoWriteBrackets(int left, int right, char *bracSt, int len, vector<string> str);
+    int CalcWaystoWriteBrackets(int left, int right, char *bracSt, int len, vector<string> &str);
     int CalcWaystoWriteSumofPerfectSquares(int num);
 
 };

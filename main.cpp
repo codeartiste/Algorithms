@@ -70,10 +70,10 @@ void test_Dynamic1(){
 }
 
 void test_permu(){
-    //Permutations *p = new Permutations("ABC");
+    Permutations *p = new Permutations("ABC");
     //p->doPermuteAndPrint();
-    //char str[] = "ABC";
-    //p->permute(str, 0, strlen(str) -1 );
+    char str[] = "ABC";
+    p->permute(str, 0, strlen(str) -1 );
     
 }
 void test_stack1(){
@@ -84,39 +84,67 @@ void test_stack1(){
 
     st.MakeValidParenthesis("{{[[{{{)((()))");
     cout << endl ;
-    st.MakeValidParenthesis("{{)");
+    st.MakeValidParenthesis("()())()");
     cout << endl ;
     
+}
+
+void test_stack2(){
+ 
+    StackAlgorithm st;
+    string exp = "()())()";
+    st.RemoveInvalidParenthesis(exp);
+    
+}
+
+void test_reccurDynamic1(){
+    
+    
+     /*RecurDynamicProg *nRP = new RecurDynamicProg();
+     
+     int ways = nRP->CalcWaystoWriteBrackets(10 , 10);
+     cout << "Ways:   " << ways <<endl;
+      */
+    
+     RecurDynamicProg *nRP = new RecurDynamicProg();
+     int n = 3;
+     vector<string> strset;
+     char *str = new char[n+11];
+     int ways = nRP->CalcWaystoWriteBrackets(n , n, str, 0, strset);
+     delete [] str;
+    for(std::vector<string>::iterator it = strset.begin(); it != strset.end(); ++it) {
+        cout << *it  << endl;
+    }
+     cout << "Ways:   " << ways <<endl;
+    
+    /*SortAlgorithms *pSort = new SortAlgorithms();
+     int arr[] = {8, 7, 26, 3, 9, 4, 12, 5};
+     pSort->myMergeSort(arr, sizeof(arr)/sizeof(int));
+     for(int i = 0 ; i < sizeof(arr)/sizeof(int); i++){
+     cout << arr[i] << ",    " ;
+     }*/
+    /*int r = 4;
+     i
+     int *arr[r];
+     for (int i=0; i<r; i++)
+     arr[i] = (int *)malloc(c * sizeof(int));
+     char grid[4][5] ={{'1', '1', '1', '1', 0}, {'1', '1', '0', '1', 0}, {'1', '1', '0', '0', 0}, {'0', '0', '0', '0', 0} };
+     Solution *s = new Solution;
+     s->numIslands((char**)grid, 4, 5);*/
 }
 
 
 int main(int argc, const char * argv[]) {
 	// insert code here...
-    test_stack1();
+    //test_stack1();
+    //test_stack2();
+    test_reccurDynamic1();
+    test_permu();
 
 	 
 
 	
-/*
-	RecurDynamicProg *nRP = new RecurDynamicProg();
 
-	int ways = nRP->CalcWaystoWriteBrackets(10 , 10);
-	cout << "Ways:   " << ways <<endl;*/
-    
-    /*SortAlgorithms *pSort = new SortAlgorithms();
-    int arr[] = {8, 7, 26, 3, 9, 4, 12, 5};
-    pSort->myMergeSort(arr, sizeof(arr)/sizeof(int));
-    for(int i = 0 ; i < sizeof(arr)/sizeof(int); i++){
-        cout << arr[i] << ",    " ;
-    }*/
-    /*int r = 4;
-    i
-    int *arr[r];
-    for (int i=0; i<r; i++)
-        arr[i] = (int *)malloc(c * sizeof(int));
-    char grid[4][5] ={{'1', '1', '1', '1', 0}, {'1', '1', '0', '1', 0}, {'1', '1', '0', '0', 0}, {'0', '0', '0', '0', 0} };
-    Solution *s = new Solution;
-    s->numIslands((char**)grid, 4, 5);*/
     
     /*
     Solution3Sum *s1 = new Solution3Sum();

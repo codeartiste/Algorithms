@@ -64,7 +64,7 @@ int RecurDynamicProg::getNumWaystoSplit(int amount){
 
 }
 
-int RecurDynamicProg::CalcWaystoWriteBrackets(int left, int right, char *bracSt, int len, vector<string> str){
+int RecurDynamicProg::CalcWaystoWriteBrackets(int left, int right, char *bracSt, int len, vector<string> &str){
     //base cases
     if(left < 0 || right < left) return 0;
     if ((left == 0)  && (right == 0)) {
@@ -72,7 +72,7 @@ int RecurDynamicProg::CalcWaystoWriteBrackets(int left, int right, char *bracSt,
         bracSt[len] = 0;
         string st1 = bracSt;
         str.push_back(st1);
-        cout << st1 << endl;
+        //cout << st1 << endl;
         return 1;
         
     }

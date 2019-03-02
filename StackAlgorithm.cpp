@@ -6,7 +6,8 @@
  */
 
 #include "StackAlgorithm.h"
-
+#include <set>
+#include <queue>
 using namespace std;
 
 
@@ -66,7 +67,6 @@ bool StackAlgorithm::CheckValidParenthesis(string str ){
 
 	}
 	if(pstack.empty()) return true;
-
 
 	return false;
 }
@@ -160,3 +160,88 @@ string StackAlgorithm::MakeValidParenthesis(string str ){
 	return cstr ;
 }
 
+
+/*
+ Though this will not be a stack algorithm though
+ It will be a BFS 
+ */
+void StackAlgorithm::RemoveInvalidParenthesis(string str){
+    if(str.empty())
+        return ;
+    //Keep the visited list of strings
+    set <string> visited;
+    
+    //queue for BFS
+    queue <string> q;
+    // to determine level of BFS
+    bool level = false;
+    string temp;
+    
+    //initiall push the entire string to q
+    
+    q.push(str);
+    visited.insert(str);
+    
+    while(!q.empty()){
+        str = q.front();
+        q.pop();
+        if(isValidString(str)){
+            
+            cout << "Valid string now " << str  << endl;
+            
+            level = true;
+            
+        }
+        
+        if (level) continue;  // continue the while
+        
+        for(int i = 0 ; i < str.length() ; i++ ){
+            
+            if( !isParenthesis(str[i])){
+                continue;
+            }
+            
+            
+            temp = str.substr(0, i ) + str.substr(i+1) ;
+            if(visited.find(temp) == visited.end()){
+                q.push(temp);
+                visited.insert(temp);
+                
+            }
+            
+            
+        }
+        
+        
+        
+        
+    }
+    
+    
+    
+}
+
+bool StackAlgorithm::isValidString(string str){
+    
+    int cnt = 0;
+    for( int i = 0 ; i < str.length(); i++){
+        if(str[i] == '(')
+            cnt++;
+        if(str[i] == ')')
+            cnt--;
+        if (cnt < 0 )
+            return false;
+        
+    }
+    
+    return (cnt ==0);
+}
+
+
+bool StackAlgorithm::isParenthesis(char c){
+    
+    if( c == '(' || c == ')')
+        return true;
+    
+    return false;
+}
