@@ -18,6 +18,7 @@
 		954DB2E821371603009E3EE5 /* Permutations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 954DB2E621371603009E3EE5 /* Permutations.cpp */; };
 		954DB2EB2137168D009E3EE5 /* RecursionDynamicProgs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 954DB2E92137168D009E3EE5 /* RecursionDynamicProgs.cpp */; };
 		954DB2F1213DB587009E3EE5 /* SortingAlgorithms.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 954DB2EF213DB587009E3EE5 /* SortingAlgorithms.cpp */; };
+		95879E95222A6626009594B2 /* ArrayAlgo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95879E93222A6626009594B2 /* ArrayAlgo.cpp */; };
 		958DC62F221FB41C00E28C95 /* GraphTraversal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 958DC62E221FB41C00E28C95 /* GraphTraversal.cpp */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,8 @@
 		954DB2EA2137168D009E3EE5 /* RecursionDynamicProgs.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RecursionDynamicProgs.hpp; sourceTree = "<group>"; };
 		954DB2EF213DB587009E3EE5 /* SortingAlgorithms.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SortingAlgorithms.cpp; sourceTree = "<group>"; };
 		954DB2F0213DB587009E3EE5 /* SortingAlgorithms.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SortingAlgorithms.hpp; sourceTree = "<group>"; };
+		95879E93222A6626009594B2 /* ArrayAlgo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayAlgo.cpp; sourceTree = "<group>"; };
+		95879E94222A6626009594B2 /* ArrayAlgo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArrayAlgo.hpp; sourceTree = "<group>"; };
 		958DC62D221FB41C00E28C95 /* GraphTraversal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphTraversal.h; sourceTree = "<group>"; };
 		958DC62E221FB41C00E28C95 /* GraphTraversal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GraphTraversal.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +76,8 @@
 		95137D2D2120B505002B6970 = {
 			isa = PBXGroup;
 			children = (
+				95879E93222A6626009594B2 /* ArrayAlgo.cpp */,
+				95879E94222A6626009594B2 /* ArrayAlgo.hpp */,
 				958DC62E221FB41C00E28C95 /* GraphTraversal.cpp */,
 				958DC62D221FB41C00E28C95 /* GraphTraversal.h */,
 				9517B96321B065B50000BC8D /* BinarySearch.cpp */,
@@ -175,6 +180,7 @@
 				954DB2F1213DB587009E3EE5 /* SortingAlgorithms.cpp in Sources */,
 				9517B96221AE7AD70000BC8D /* StringProblems.cpp in Sources */,
 				951311FB21472EA60098668D /* Problems.cpp in Sources */,
+				95879E95222A6626009594B2 /* ArrayAlgo.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

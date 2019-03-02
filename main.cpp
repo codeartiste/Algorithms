@@ -17,6 +17,7 @@
 #include "Backtracking.h"
 #include "StackAlgorithm.h"
 #include "BinarySearch.h"
+#include "ArrayAlgo.hpp"
 
 void test_graph1(){
     
@@ -134,12 +135,24 @@ void test_reccurDynamic1(){
 }
 
 
+void test_arralgo1(){
+    ArrayAlgo alg;
+    vector<int> a{1, 3, 3, 5, 5, 8, 10};
+    vector<int> b{1, 3, 4, 6, 8, 8, 9, 10};
+    
+    alg.Aunion(a, b);
+    alg.Aintersect(a,b);
+   
+    
+}
+
 int main(int argc, const char * argv[]) {
 	// insert code here...
     //test_stack1();
     //test_stack2();
-    test_reccurDynamic1();
-    test_permu();
+    //test_reccurDynamic1();
+    //test_permu();
+    test_arralgo1();
 
 	 
 
