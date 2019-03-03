@@ -3,12 +3,15 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "GraphAdjacencyList::Union(int*, int, int):GraphStructure.cpp">
+         contextName = "GraphAdjacencyList::DFSSearchPath(int, int, bool*):GraphStructure.cpp">
          <PersistentStrings>
             <PersistentString
-               value = "&apos;*parent @ 10&apos;">
+               value = "*i">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PriorityQueue::minHeapify(int):PriorityQueue.cpp">
       </ContextState>
       <ContextState
          contextName = "SortAlgorithms::domyQsort(int*, int, int):SortingAlgorithms.cpp">
@@ -33,6 +36,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "GraphAdjacencyList::Union(int*, int, int):GraphStructure.cpp">
+         <PersistentStrings>
+            <PersistentString
+               value = "&apos;*parent @ 10&apos;">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "GraphAdjacencyList::isCyclicUnionFind():GraphStructure.cpp">
          <PersistentStrings>
             <PersistentString
@@ -49,14 +60,6 @@
             </PersistentString>
             <PersistentString
                value = "*(parent+2)">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "GraphAdjacencyList::DFSSearchPath(int, int, bool*):GraphStructure.cpp">
-         <PersistentStrings>
-            <PersistentString
-               value = "*i">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

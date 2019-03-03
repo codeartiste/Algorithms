@@ -170,9 +170,20 @@ void test_PriorityQ(){
     pq.insert(8);
     pq.insert(21);
     pq.insert(2);
+    pq.insert(100);
+    pq.insert(25);
+    pq.insert(51);
     cout<< endl << pq.findMinimum() << endl <<endl << endl;
-    ;    pq.print();
+    pq.print();
     
+    pq.deleteMinimum();
+    pq.print();
+    
+    pq.deleteMinimum();
+    pq.print();
+    
+    pq.deleteMinimum();
+    pq.print();
     
 }
 

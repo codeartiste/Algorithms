@@ -22,7 +22,8 @@ PriorityQueue::PriorityQueue(int type){
 
 void PriorityQueue::print(){
     for (auto x : heap)
-        cout << x << endl;
+        cout << x << "    ";
+    cout << endl;
 }
 
 void PriorityQueue::SwAp(int &x , int &y){
@@ -38,7 +39,6 @@ bool PriorityQueue::insert(int x){
     heap.push_back(x);
     pos = (int)(heap.size() -1 );
     
-    
     while(pos!=0 && parent >= 0){
         if(pos %2 == 0) parent = (pos-2 )/2 ;
         else parent = (pos -1 )/2 ;
@@ -50,34 +50,46 @@ bool PriorityQueue::insert(int x){
             break;
         }
     }
-    
     return true;
 }
 
 
 
 int  PriorityQueue::findMinimum(){
-    
     return heap.front();
 }
 
 
 bool PriorityQueue::deleteMinimum(){
-    
+    int elem;
     if(heap.size() == 0) return true;
     // get the last element
-    int elem;
     elem = heap.back();
-    heap.erase(heap.end());
+    heap.pop_back();
     if(heap.size() == 0) return true;
-    int pos = 0;
-    int child = 0;
-    while( child < heap.size()){
-        
+    
+    heap.front() = elem;
+    minHeapify(0);
+    
+
+    return true;
+}
+
+void PriorityQueue::minHeapify(int index){
+    if(index >= heap.size()) return;
+    int lindex = 2*index + 1 ;
+    int rindex = lindex + 1;
+    int smallest = index;
+    if(lindex < heap.size() && heap[index] > heap[lindex]){
+        smallest = lindex;
     }
+    if(rindex < heap.size() && heap[smallest] > heap[rindex]){
+        smallest = rindex;
+    }
+    if( smallest != index){
+        SwAp(heap[smallest], heap[index]);
+        minHeapify(smallest);
+    }
+    return;
     
-    
-    
-    
-    return true;;
 }

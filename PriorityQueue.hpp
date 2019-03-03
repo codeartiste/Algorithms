@@ -23,6 +23,7 @@ using namespace std ;
 
 class PriorityQueue{
     void SwAp(int &x , int &y);
+    void minHeapify(int index);
     vector<int> heap;
 public:
     // type 0 = binary heap  : 1=sorted ArrayList  : 2 = binary search tree
