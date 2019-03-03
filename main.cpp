@@ -18,6 +18,8 @@
 #include "StackAlgorithm.h"
 #include "BinarySearch.h"
 #include "ArrayAlgo.hpp"
+#include "PriorityQueue.hpp"
+
 
 void test_graph1(){
     
@@ -52,12 +54,14 @@ void test_graph1(){
     //pAdj->PrintDFS(7);
     
     //pAdj->SearchPath(1, 7);
+    
+    delete [] pAdj;
     cout <<endl ;
     
 }
 
 void test_Dynamic1(){
-    RecurDynamicProg *nRP = new RecurDynamicProg();
+    RecurDynamicProg nRP;
     int n = 8;
     int *memo;
     memo = new int[n + 1];
@@ -66,15 +70,15 @@ void test_Dynamic1(){
     }
 
     cout << "Num ways to climb = "
-    << nRP->getChildNumWaysToClimb(n, memo) << endl;
+    << nRP.getChildNumWaysToClimb(n, memo) << endl;
     
 }
 
 void test_permu(){
-    Permutations *p = new Permutations("ABC");
+    Permutations p("ABC");
     //p->doPermuteAndPrint();
     char str[] = "ABC";
-    p->permute(str, 0, strlen(str) -1 );
+    p.permute(str, 0, strlen(str) -1 );
     
 }
 void test_stack1(){
@@ -139,10 +143,36 @@ void test_arralgo1(){
     ArrayAlgo alg;
     vector<int> a{1, 3, 3, 5, 5, 8, 10};
     vector<int> b{1, 3, 4, 6, 8, 8, 9, 10};
+    vector<int> out;
+    out = alg.Aunion(a, b);
     
-    alg.Aunion(a, b);
-    alg.Aintersect(a,b);
+    for (std::vector<int>::iterator it = out.begin() ; it != out.end(); ++it)
+        std::cout << ' ' << *it;
+    std::cout << '\n';
+    
+    
+    out = alg.Aintersect(a,b);
+    
+    for (std::vector<int>::iterator it = out.begin() ; it != out.end(); ++it)
+        std::cout << ' ' << *it;
+    std::cout << '\n';
    
+    
+}
+
+void test_PriorityQ(){
+
+    PriorityQueue pq(0);
+    pq.insert(20);
+    pq.insert(10);
+    pq.insert(11);
+    pq.insert(5);
+    pq.insert(8);
+    pq.insert(21);
+    pq.insert(2);
+    cout<< endl << pq.findMinimum() << endl <<endl << endl;
+    ;    pq.print();
+    
     
 }
 
@@ -152,7 +182,8 @@ int main(int argc, const char * argv[]) {
     //test_stack2();
     //test_reccurDynamic1();
     //test_permu();
-    test_arralgo1();
+    //test_arralgo1();
+    test_PriorityQ();
 
 	 
 

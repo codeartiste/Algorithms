@@ -49,7 +49,6 @@ vector<int> ArrayAlgo::Aunion(vector<int> &a , vector <int> &b)
         // Fill with the remainder of the other array in the output array
         if(firstLeft == a.size()){
             while(secondLeft < b.size()){
-                //output[count] = b[secondLeft];
                 output.push_back(b[secondLeft]);
                 count++;
             }
@@ -58,7 +57,6 @@ vector<int> ArrayAlgo::Aunion(vector<int> &a , vector <int> &b)
         }
         if(secondLeft == b.size()){
             while(firstLeft < a.size()){
-                //output[count] = a[firstLeft];
                 output.push_back(a[firstLeft]);
                 count++;
             }
@@ -66,9 +64,7 @@ vector<int> ArrayAlgo::Aunion(vector<int> &a , vector <int> &b)
         }
         
     }
-    for (std::vector<int>::iterator it = output.begin() ; it != output.end(); ++it)
-        std::cout << ' ' << *it;
-    std::cout << '\n';
+    
     return output;
 
     
@@ -91,11 +87,8 @@ vector<int> ArrayAlgo::Aintersect(vector<int> &a, vector<int> &b){
         }
         else{ // equality
             int num = a[firstLeft];
-            //output[count] = a[firstLeft];
             output.push_back(num);
             count++;
-            //firstLeft++;
-            //secondLeft++;
             // Now skip in both the arrays
             while(a[firstLeft] == num){
                 firstLeft++;
@@ -106,9 +99,7 @@ vector<int> ArrayAlgo::Aintersect(vector<int> &a, vector<int> &b){
         }
         
     }
-    for (std::vector<int>::iterator it = output.begin() ; it != output.end(); ++it)
-        std::cout << ' ' << *it;
-    std::cout << '\n';
+
     
     return output;
     

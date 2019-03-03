@@ -19,6 +19,7 @@
 		954DB2EB2137168D009E3EE5 /* RecursionDynamicProgs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 954DB2E92137168D009E3EE5 /* RecursionDynamicProgs.cpp */; };
 		954DB2F1213DB587009E3EE5 /* SortingAlgorithms.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 954DB2EF213DB587009E3EE5 /* SortingAlgorithms.cpp */; };
 		95879E95222A6626009594B2 /* ArrayAlgo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95879E93222A6626009594B2 /* ArrayAlgo.cpp */; };
+		95879E98222BAB50009594B2 /* PriorityQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95879E96222BAB50009594B2 /* PriorityQueue.cpp */; };
 		958DC62F221FB41C00E28C95 /* GraphTraversal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 958DC62E221FB41C00E28C95 /* GraphTraversal.cpp */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,8 @@
 		954DB2F0213DB587009E3EE5 /* SortingAlgorithms.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SortingAlgorithms.hpp; sourceTree = "<group>"; };
 		95879E93222A6626009594B2 /* ArrayAlgo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayAlgo.cpp; sourceTree = "<group>"; };
 		95879E94222A6626009594B2 /* ArrayAlgo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArrayAlgo.hpp; sourceTree = "<group>"; };
+		95879E96222BAB50009594B2 /* PriorityQueue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PriorityQueue.cpp; sourceTree = "<group>"; };
+		95879E97222BAB50009594B2 /* PriorityQueue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PriorityQueue.hpp; sourceTree = "<group>"; };
 		958DC62D221FB41C00E28C95 /* GraphTraversal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphTraversal.h; sourceTree = "<group>"; };
 		958DC62E221FB41C00E28C95 /* GraphTraversal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GraphTraversal.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +79,8 @@
 		95137D2D2120B505002B6970 = {
 			isa = PBXGroup;
 			children = (
+				95879E96222BAB50009594B2 /* PriorityQueue.cpp */,
+				95879E97222BAB50009594B2 /* PriorityQueue.hpp */,
 				95879E93222A6626009594B2 /* ArrayAlgo.cpp */,
 				95879E94222A6626009594B2 /* ArrayAlgo.hpp */,
 				958DC62E221FB41C00E28C95 /* GraphTraversal.cpp */,
@@ -175,6 +180,7 @@
 				9517B96521B065B50000BC8D /* BinarySearch.cpp in Sources */,
 				95137D422120B568002B6970 /* GraphStructure.cpp in Sources */,
 				9517B96121AE7AD70000BC8D /* Backtracking.cpp in Sources */,
+				95879E98222BAB50009594B2 /* PriorityQueue.cpp in Sources */,
 				95137D3A2120B505002B6970 /* main.cpp in Sources */,
 				95403753214EBF31003B1617 /* TreeDataStructure.cpp in Sources */,
 				954DB2F1213DB587009E3EE5 /* SortingAlgorithms.cpp in Sources */,
