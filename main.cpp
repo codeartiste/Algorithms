@@ -55,7 +55,7 @@ void test_graph1(){
     
     //pAdj->SearchPath(1, 7);
     
-    delete [] pAdj;
+    delete pAdj;
     cout <<endl ;
     
 }
@@ -138,6 +138,12 @@ void test_reccurDynamic1(){
      s->numIslands((char**)grid, 4, 5);*/
 }
 
+void test_reccurDynamic2(){
+    RecurDynamicProg RP ;
+    vector<int> coins = {2};
+    cout << "Min Num ways =" << RP.CalculateCoinDenom(coins, 3) << endl;
+}
+
 
 void test_arralgo1(){
     ArrayAlgo alg;
@@ -194,8 +200,8 @@ int main(int argc, const char * argv[]) {
     //test_reccurDynamic1();
     //test_permu();
     //test_arralgo1();
-    test_PriorityQ();
-
+    //test_PriorityQ();
+    test_reccurDynamic2();
 	 
 
 	

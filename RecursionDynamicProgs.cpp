@@ -114,3 +114,20 @@ int RecurDynamicProg::CalcWaystoWriteSumofPerfectSquares(int num){
 }
 
 
+int RecurDynamicProg::CalculateCoinDenom(vector<int> & coins, int amount){
+    
+        if (amount == 0) return 0;
+        vector <int> need ( amount + 1 , amount + 1);
+        need[0] = 0;
+        for(int c: coins){
+            for(int i = c ; i <= amount; i ++){
+                need[i] = min(need[i] , need[i - c] + 1 );
+                
+            }
+            
+        }
+    
+        return (need.back() > amount ) ? -1 : need.back() ; // thus all of them were initialized to amount + 1
+    
+}
+

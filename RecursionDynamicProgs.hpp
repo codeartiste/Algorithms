@@ -23,6 +23,7 @@ public:
     int getNumWaystoSplit(int amount);
     int CalcWaystoWriteBrackets(int left, int right, char *bracSt, int len, vector<string> &str);
     int CalcWaystoWriteSumofPerfectSquares(int num);
+    int CalculateCoinDenom(vector<int> &coins, int amount);
 
 };
 
