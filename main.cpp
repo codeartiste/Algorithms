@@ -144,6 +144,15 @@ void test_reccurDynamic2(){
     cout << "Min Num ways =" << RP.CalculateCoinDenom(coins, 3) << endl;
 }
 
+void test_reccurDynamic3(){
+    RecurDynamicProg RP ;
+    vector<int> seq = {2, 4, 3, 5, 1, 7, 6, 9, 8};
+    vector<int> seq2 ={1,3,6,7,9,4,10,5,6};
+    cout << "Longest Increasing Subsequence =  " << RP.LenLISubSequence(seq2) << endl;
+}
+
+
+
 
 void test_arralgo1(){
     ArrayAlgo alg;
@@ -201,7 +210,8 @@ int main(int argc, const char * argv[]) {
     //test_permu();
     //test_arralgo1();
     //test_PriorityQ();
-    test_reccurDynamic2();
+    //test_reccurDynamic2();
+    test_reccurDynamic3();
 	 
 
 	

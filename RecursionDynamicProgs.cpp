@@ -131,3 +131,28 @@ int RecurDynamicProg::CalculateCoinDenom(vector<int> & coins, int amount){
     
 }
 
+int RecurDynamicProg::MyMax( vector<int> & seq, vector<int> & longNum, int j){
+    
+    int mx = 0;
+    for(int i = 0 ; i <  j ; i++){
+        if(seq[j] > seq[i] ){
+            mx = (mx > longNum[i] )? mx : longNum[i];
+        }
+        
+    }
+    return mx;
+}
+
+
+int RecurDynamicProg::LenLISubSequence(vector<int> seq){
+    int max = -1;
+    vector <int> longNum(seq.size(), 0) ;
+    for(int i = 0 ; i < seq.size() ; i++ ){
+        
+        longNum[i] = 1 + MyMax(seq, longNum, i);
+        if( max < longNum[i]) max = longNum[i];
+    }
+    
+    
+    return max;
+}

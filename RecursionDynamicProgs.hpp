@@ -17,6 +17,7 @@ class RecurDynamicProg{
     
 	int getNumWaystoSplitNCents(int amount, int denom[], int index, int numDenoms);
 	int **map;
+    int MyMax(vector<int> & seq, vector<int> & longNum, int j);
 public:
 	RecurDynamicProg();
     int getChildNumWaysToClimb(int steps, int []);
@@ -24,6 +25,7 @@ public:
     int CalcWaystoWriteBrackets(int left, int right, char *bracSt, int len, vector<string> &str);
     int CalcWaystoWriteSumofPerfectSquares(int num);
     int CalculateCoinDenom(vector<int> &coins, int amount);
+    int LenLISubSequence(vector<int> seq);
 
 };
 
