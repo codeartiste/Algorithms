@@ -30,11 +30,17 @@ RecurDynamicProg::RecurDynamicProg(){
 
 int RecurDynamicProg::getChildNumWaysToClimb(int steps, int memo[] ){
 
-    if(steps <= 0){
+    if(steps < 0){
         return 0;
     }
-    if(memo[steps] == -1){
-        memo[steps] = (1 + getChildNumWaysToClimb(steps - 1, memo) + getChildNumWaysToClimb(steps - 2, memo) + getChildNumWaysToClimb(steps - 3, memo));
+    if(steps == 0 || steps == 1)
+        memo[steps] = 1 ;
+    else if (steps == 2 )
+        memo[steps] = 2 ;
+    else{
+        if(memo[steps] == -1){
+            memo[steps] = (getChildNumWaysToClimb(steps - 1, memo) + getChildNumWaysToClimb(steps - 2, memo) + getChildNumWaysToClimb(steps - 3, memo));
+        }
     }
     return memo[steps] ;
 

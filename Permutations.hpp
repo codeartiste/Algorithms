@@ -20,9 +20,11 @@ class Permutations {
 
 public:
 	Permutations(string s);
+    Permutations();
 	void doPermuteAndPrint();
 	int setString(string s);
 	void permute(char *a, int l, int r);
+    void permute2(char *a, int n);
 
 };
 

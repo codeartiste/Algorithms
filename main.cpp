@@ -60,27 +60,24 @@ void test_graph1(){
     
 }
 
-void test_Dynamic1(){
-    RecurDynamicProg nRP;
-    int n = 8;
-    int *memo;
-    memo = new int[n + 1];
-    for (int i = 0; i <= n; i++) {
-    memo[i] = -1;
-    }
 
-    cout << "Num ways to climb = "
-    << nRP.getChildNumWaysToClimb(n, memo) << endl;
-    
-}
 
-void test_permu(){
+void test_permute1(){
     Permutations p("ABC");
     //p->doPermuteAndPrint();
     char str[] = "ABC";
     p.permute(str, 0, strlen(str) -1 );
     
 }
+
+void test_permute2(){
+    Permutations p;
+    //p->doPermuteAndPrint();
+    char str[] = "ABCD";
+    p.permute2(str, strlen(str) );
+    
+}
+
 void test_stack1(){
     StackAlgorithm st;
     cout <<st.CheckValidParenthesis("((aaa{ccc})){}") << endl ;
@@ -101,7 +98,19 @@ void test_stack2(){
     st.RemoveInvalidParenthesis(exp);
     
 }
-
+void test_reccurDynamic0(){
+    RecurDynamicProg nRP;
+    int n = 3;
+    int *memo;
+    memo = new int[n + 1];
+    for (int i = 0; i <= n; i++) {
+        memo[i] = -1;
+    }
+    
+    cout << "Num ways to climb = "
+    << nRP.getChildNumWaysToClimb(n, memo) << endl;
+    
+}
 void test_reccurDynamic1(){
     
     
@@ -202,6 +211,35 @@ void test_PriorityQ(){
     
 }
 
+void test_binaryTree(){
+    
+    
+     BinTreeNode * head  = NULL;
+     head = new BinTreeNode(12);
+     
+     BinTreeNode::addBinSearchTreeElems(head, 5);
+     BinTreeNode::addBinSearchTreeElems(head, 7);
+     BinTreeNode::addBinSearchTreeElems(head, 15);
+     BinTreeNode::addBinSearchTreeElems(head, 18);
+     BinTreeNode::addBinSearchTreeElems(head, 11);
+     BinTreeNode::addBinSearchTreeElems(head, 3);
+     BinTreeNode::addBinSearchTreeElems(head, 21);
+     BinTreeNode::addBinSearchTreeElems(head, 9);
+     BinTreeNode::addBinSearchTreeElems(head, 1);
+     BinTreeNode::addBinSearchTreeElems(head, 14);
+     BinTreeNode::addBinSearchTreeElems(head, 17);
+     BinTreeNode::addBinSearchTreeElems(head, 19);
+     BinTreeNode::addBinSearchTreeElems(head, 25);
+     BinTreeNode::addBinSearchTreeElems(head, 28);
+     
+     BinTreeNode::doInorder(head);
+     
+     cout << "==============" << endl ;
+     int now = 0;
+     BinTreeNode::doInorderKSmall(head, 8, now);
+    
+}
+
 int main(int argc, const char * argv[]) {
 	// insert code here...
     //test_stack1();
@@ -211,8 +249,10 @@ int main(int argc, const char * argv[]) {
     //test_arralgo1();
     //test_PriorityQ();
     //test_reccurDynamic2();
-    test_reccurDynamic3();
-	 
+    //test_reccurDynamic3();
+    //test_reccurDynamic0();
+    //test_permute2();
+    test_binaryTree();
 
 	
 

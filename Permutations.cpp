@@ -11,6 +11,10 @@ Permutations::Permutations(string s) {
 
 	m_str = s;
 }
+Permutations::Permutations() {
+    
+    
+}
 
 int Permutations::setString(string s) {
 
@@ -67,5 +71,16 @@ void Permutations::permute(char *a, int l, int r) {
 		}
 	}
 
+}
+
+
+void Permutations::permute2(char *a, int n) {
+    if(n == 1)
+        cout << string(a) << endl;
+    for(int i = 0 ; i < n ; i++){
+        swap((a + i), (a + n - 1) ); //choose
+        permute2(a, n-1); // do
+        swap((a + i), (a + n - 1) ); //unchoose
+    }
 }
 

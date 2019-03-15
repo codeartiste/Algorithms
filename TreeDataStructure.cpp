@@ -28,8 +28,6 @@ void BinTreeNode::doBFS(BinTreeNode *t){
 
 	}
 
-
-
 }
 
 void BinTreeNode::doInorder(BinTreeNode *t){
