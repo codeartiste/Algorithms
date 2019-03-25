@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		951311FB21472EA60098668D /* Problems.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 951311FA21472EA60098668D /* Problems.cpp */; };
+		951311FB21472EA60098668D /* MiscProblems.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 951311FA21472EA60098668D /* MiscProblems.cpp */; };
 		95137D3A2120B505002B6970 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95137D392120B505002B6970 /* main.cpp */; };
 		95137D422120B568002B6970 /* GraphStructure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95137D402120B568002B6970 /* GraphStructure.cpp */; };
 		9517B96021AE7AD70000BC8D /* StackAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9517B95C21AE7AD70000BC8D /* StackAlgorithm.cpp */; };
@@ -22,6 +22,7 @@
 		95879E98222BAB50009594B2 /* PriorityQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95879E96222BAB50009594B2 /* PriorityQueue.cpp */; };
 		95879E9B222F022B009594B2 /* SuffixTrieTrees.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95879E99222F022A009594B2 /* SuffixTrieTrees.cpp */; };
 		958DC62F221FB41C00E28C95 /* GraphTraversal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 958DC62E221FB41C00E28C95 /* GraphTraversal.cpp */; };
+		95C562FF223C35390005357C /* LRUCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95C562FD223C35390005357C /* LRUCache.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,7 +38,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		951311FA21472EA60098668D /* Problems.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Problems.cpp; sourceTree = "<group>"; };
+		951311FA21472EA60098668D /* MiscProblems.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MiscProblems.cpp; sourceTree = "<group>"; };
 		95137D362120B505002B6970 /* Algorithms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Algorithms; sourceTree = BUILT_PRODUCTS_DIR; };
 		95137D392120B505002B6970 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		95137D402120B568002B6970 /* GraphStructure.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GraphStructure.cpp; sourceTree = "<group>"; usesTabs = 0; };
@@ -51,7 +52,7 @@
 		9517B96421B065B50000BC8D /* BinarySearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinarySearch.h; sourceTree = "<group>"; };
 		95403751214EBF31003B1617 /* TreeDataStructure.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TreeDataStructure.cpp; sourceTree = "<group>"; };
 		95403752214EBF31003B1617 /* TreeDataStructure.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TreeDataStructure.hpp; sourceTree = "<group>"; };
-		954DB2E521371603009E3EE5 /* ProblemHeaders.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ProblemHeaders.hpp; sourceTree = "<group>"; };
+		954DB2E521371603009E3EE5 /* MiscProblems.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MiscProblems.hpp; sourceTree = "<group>"; };
 		954DB2E621371603009E3EE5 /* Permutations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Permutations.cpp; sourceTree = "<group>"; };
 		954DB2E721371603009E3EE5 /* Permutations.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Permutations.hpp; sourceTree = "<group>"; };
 		954DB2E92137168D009E3EE5 /* RecursionDynamicProgs.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RecursionDynamicProgs.cpp; sourceTree = "<group>"; };
@@ -66,6 +67,8 @@
 		95879E9A222F022B009594B2 /* SuffixTrieTrees.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SuffixTrieTrees.hpp; sourceTree = "<group>"; };
 		958DC62D221FB41C00E28C95 /* GraphTraversal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphTraversal.h; sourceTree = "<group>"; };
 		958DC62E221FB41C00E28C95 /* GraphTraversal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GraphTraversal.cpp; sourceTree = "<group>"; };
+		95C562FD223C35390005357C /* LRUCache.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LRUCache.cpp; sourceTree = "<group>"; };
+		95C562FE223C35390005357C /* LRUCache.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LRUCache.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,8 @@
 		95137D2D2120B505002B6970 = {
 			isa = PBXGroup;
 			children = (
+				95C562FD223C35390005357C /* LRUCache.cpp */,
+				95C562FE223C35390005357C /* LRUCache.hpp */,
 				95879E99222F022A009594B2 /* SuffixTrieTrees.cpp */,
 				95879E9A222F022B009594B2 /* SuffixTrieTrees.hpp */,
 				95879E96222BAB50009594B2 /* PriorityQueue.cpp */,
@@ -99,7 +104,6 @@
 				9517B95E21AE7AD70000BC8D /* StringProblems.cpp */,
 				954DB2E621371603009E3EE5 /* Permutations.cpp */,
 				954DB2E721371603009E3EE5 /* Permutations.hpp */,
-				954DB2E521371603009E3EE5 /* ProblemHeaders.hpp */,
 				95137D402120B568002B6970 /* GraphStructure.cpp */,
 				95137D412120B568002B6970 /* GraphStructure.hpp */,
 				95137D392120B505002B6970 /* main.cpp */,
@@ -107,7 +111,8 @@
 				954DB2EA2137168D009E3EE5 /* RecursionDynamicProgs.hpp */,
 				954DB2EF213DB587009E3EE5 /* SortingAlgorithms.cpp */,
 				954DB2F0213DB587009E3EE5 /* SortingAlgorithms.hpp */,
-				951311FA21472EA60098668D /* Problems.cpp */,
+				951311FA21472EA60098668D /* MiscProblems.cpp */,
+				954DB2E521371603009E3EE5 /* MiscProblems.hpp */,
 				95403751214EBF31003B1617 /* TreeDataStructure.cpp */,
 				95403752214EBF31003B1617 /* TreeDataStructure.hpp */,
 				95137D372120B505002B6970 /* Products */,
@@ -182,6 +187,7 @@
 				95879E9B222F022B009594B2 /* SuffixTrieTrees.cpp in Sources */,
 				958DC62F221FB41C00E28C95 /* GraphTraversal.cpp in Sources */,
 				954DB2EB2137168D009E3EE5 /* RecursionDynamicProgs.cpp in Sources */,
+				95C562FF223C35390005357C /* LRUCache.cpp in Sources */,
 				954DB2E821371603009E3EE5 /* Permutations.cpp in Sources */,
 				9517B96521B065B50000BC8D /* BinarySearch.cpp in Sources */,
 				95137D422120B568002B6970 /* GraphStructure.cpp in Sources */,
@@ -191,7 +197,7 @@
 				95403753214EBF31003B1617 /* TreeDataStructure.cpp in Sources */,
 				954DB2F1213DB587009E3EE5 /* SortingAlgorithms.cpp in Sources */,
 				9517B96221AE7AD70000BC8D /* StringProblems.cpp in Sources */,
-				951311FB21472EA60098668D /* Problems.cpp in Sources */,
+				951311FB21472EA60098668D /* MiscProblems.cpp in Sources */,
 				95879E95222A6626009594B2 /* ArrayAlgo.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,6 +20,7 @@ class ArrayAlgo {
 public:
     vector<int> Aunion(vector<int> &a , vector <int> &b);
     vector<int> Aintersect(vector<int> &a, vector<int> &b);
+    bool iSRotated(vector<int> a, vector<int> b);
     
 };
 #endif /* ArrayAlgo_hpp */

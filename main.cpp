@@ -184,6 +184,13 @@ void test_arralgo1(){
     
 }
 
+void test_arralgo2(){
+    ArrayAlgo alg;
+    vector<int> a{1, 3, 3, 5, 5, 8, 10};
+    vector<int> b{3, 5, 5, 8, 10, 1, 3 };
+    cout<< "iSRotated = " << alg.iSRotated(a, b) << endl;
+}
+
 void test_PriorityQ(){
 
     PriorityQueue pq(0);
@@ -240,6 +247,70 @@ void test_binaryTree(){
     
 }
 
+
+ // Definition for singly-linked list.
+  struct ListNode {
+      int val;
+      ListNode *next;
+     ListNode(int x) : val(x), next(NULL) {}
+ };
+ 
+class Solution1 {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        
+        ListNode* out = NULL , *returnOut= NULL;
+        int sum = 0 ;
+        int carry = 0;
+        while(l1 && l2){
+            int t;
+            t = l1->val + l2->val + carry;
+            carry = t / 10;
+            t = t % 10 ;
+            sum = sum * 10 + t;
+            if(!out){
+                out = new ListNode(t);
+                returnOut = out;
+            }
+            else{
+                out->next = new ListNode(t);
+                out = out->next;
+            }
+            
+            l1 = l1 ->next;
+            l2 = l2 ->next;
+        }
+        
+        ListNode* temp ;
+        
+        temp = (l1 == NULL) ? l2: l1 ;
+        
+        while (temp){
+            
+            int t;
+            t = temp->val + carry;
+            carry = t / 10;
+            t = t % 10 ;
+            sum += sum * 10 + t;
+            if(!out){
+                out = new ListNode(t);
+                returnOut = out;
+            }
+            else{
+                out->next = new ListNode(t);
+                out = out->next;
+            }
+            
+            temp = temp ->next;
+        }
+        
+        return returnOut;
+    }
+    
+private:
+    
+};
+
 int main(int argc, const char * argv[]) {
 	// insert code here...
     //test_stack1();
@@ -252,11 +323,33 @@ int main(int argc, const char * argv[]) {
     //test_reccurDynamic3();
     //test_reccurDynamic0();
     //test_permute2();
-    test_binaryTree();
+    //test_binaryTree();
 
-	
-
+    //RecurDynamicProg *nRP = new RecurDynamicProg();
+    //nRP->CalcWaystoWriteSumofPerfectSquares(20);
+    test_arralgo2();
     
+    /*
+    ListNode *a , *b ;
+    ListNode * t;
+    a = new ListNode(2);
+    t = a ;
+    t ->next = new ListNode(4) ;
+    t = t->next;
+    t ->next = new ListNode(3) ;
+    b = new ListNode(5);
+    t = b ;
+    t ->next = new ListNode(6) ;
+    t = t->next;
+    t ->next = new ListNode(4) ;
+    Solution1 s1;
+    t = s1.addTwoNumbers(a, b);
+    while(t != NULL){
+        cout << t->val;
+        t = t ->next;
+    }
+
+    */
     /*
     Solution3Sum *s1 = new Solution3Sum();
     vector<int> nums = {-1,0,1,2,-1,-4};

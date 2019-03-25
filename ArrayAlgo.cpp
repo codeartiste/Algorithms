@@ -105,3 +105,30 @@ vector<int> ArrayAlgo::Aintersect(vector<int> &a, vector<int> &b){
     
     
 }
+
+
+bool ArrayAlgo::iSRotated(vector<int> a, vector<int> b){
+    if(a.size() != b.size()) return false;
+    int retVal = true;
+    vector<int> c(a);
+    for(int i = 0 ; i < a.size(); i++){
+        c.push_back(a[i]);
+    }
+    for(int i = 0 ; i < a.size() ; i++){
+        int start = 0;
+        retVal = true;
+        while(start < b.size()){
+            if(c[i + start] == b[start]){
+                
+            }
+            else{
+                retVal = false;
+                break;
+            }
+            start++;
+        }
+        if(retVal == true) break;
+    }
+    
+    return retVal;
+}
